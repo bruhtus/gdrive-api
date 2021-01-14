@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "update-file-drive.py", line 71, in <module>
+    Fire(main)
+  File "/home/bruhtus/miniconda3/envs/handson-ml/lib/python3.7/site-packages/fire/core.py", line 138, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "/home/bruhtus/miniconda3/envs/handson-ml/lib/python3.7/site-packages/fire/core.py", line 468, in _Fire
+    target=component.__name__)
+  File "/home/bruhtus/miniconda3/envs/handson-ml/lib/python3.7/site-packages/fire/core.py", line 672, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "update-file-drive.py", line 36, in main
+    update_file(name, file_id, path, drive_service)
+  File "update-file-drive.py", line 67, in update_file
+    media_body=media_body).execute()
+  File "/home/bruhtus/miniconda3/envs/handson-ml/lib/python3.7/site-packages/googleapiclient/_helpers.py", line 134, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/bruhtus/miniconda3/envs/handson-ml/lib/python3.7/site-packages/googleapiclient/http.py", line 879, in execute
+    _, body = self.next_chunk(http=http, num_retries=num_retries)
+  File "/home/bruhtus/miniconda3/envs/handson-ml/lib/python3.7/site-packages/googleapiclient/_helpers.py", line 134, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/bruhtus/miniconda3/envs/handson-ml/lib/python3.7/site-packages/googleapiclient/http.py", line 1066, in next_chunk
+    return self._process_response(resp, content)
+  File "/home/bruhtus/miniconda3/envs/handson-ml/lib/python3.7/site-packages/googleapiclient/http.py", line 1097, in _process_response
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 403 when requesting https://www.googleapis.com/upload/drive/v3/files/1R8yPVUbi2WlOMDmzegHZHSt_71ranIV7?alt=json&uploadType=resumable returned "The resource body includes fields which are not directly writable.". Details: "The resource body includes fields which are not directly writable.">
